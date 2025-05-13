@@ -9,10 +9,12 @@
     </div>
     <div class="col-6 mt-5">
       <h2>Event binding</h2>
-      <button (click)="CheckStatus()">Test Event Binding</button>
+      <button class="btn btn-primary" (click)="CheckStatus()">Test Event Binding</button>
     </div>
     <div class="col-6 mt-5">
       <h2>Property binding</h2>
+      <button class="btn btn-primary" (click)="CheckDisabled()">Disable/Enable</button>
+      <button class="btn btn-primary" [disabled]="isButtonDisabled">Test Property Binding</button>
     </div>
         <div class="col-6 mt-5">
       <h2>Property binding</h2>
