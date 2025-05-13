@@ -17,4 +17,10 @@ export class BindingComponent {
   CheckStatus() {
     alert('Hello from CheckStatus!');
   }
+
+    isButtonDisabled: boolean = true;
+
+    CheckDisabled() {
+      this.isButtonDisabled = !this.isButtonDisabled;
+    }
 }
