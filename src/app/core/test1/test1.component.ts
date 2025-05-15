@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TestserviceService } from '../../shared/service/testservice.service';
 
 @Component({
   selector: 'app-test1',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './test1.component.css'
 })
 export class Test1Component {
+  constructor(public dataSvc: TestserviceService) {
 
+  }
 }
