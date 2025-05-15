@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TestserviceService } from '../../shared/service/testservice.service';
+import { Credentials } from '../../shared/models/credentials';
 
 @Component({
   selector: 'app-test1',
@@ -9,6 +10,17 @@ import { TestserviceService } from '../../shared/service/testservice.service';
 })
 export class Test1Component {
   constructor(public dataSvc: TestserviceService) {
+  }
 
+  cred: Credentials= new Credentials();
+
+  RunLogin() {
+    this.dataSvc.CheckLoginStatus('admin', 'admin').subscribe({
+      next: (data) => {
+        if (data == 200) {
+          alert('Login Successful');
+        }
+      },
+    })
   }
 }
