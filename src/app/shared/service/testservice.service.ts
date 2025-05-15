@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Credentials } from '../models/credentials';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,9 @@ export class TestserviceService {
   constructor(private http: HttpClient) { }
   // Method to fetch data from an API
 
-  CheckLoginStatus(username: string, password: string) {
+  CheckLoginStatus(cred: Credentials) {
 
-    return this.http.post( 'https://localhost:7023/login', username)
+    return this.http.post( 'https://localhost:7023/api/login', cred)
 
     this.isLogged = true;
   }

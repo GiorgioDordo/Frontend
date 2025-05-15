@@ -15,7 +15,9 @@ export class Test1Component {
   cred: Credentials= new Credentials();
 
   RunLogin() {
-    this.dataSvc.CheckLoginStatus('admin', 'admin').subscribe({
+    this.cred.userName = 'admin';
+    this.cred.password = 'admin';
+    this.dataSvc.CheckLoginStatus(this.cred).subscribe({
       next: (data) => {
         if (data == 200) {
           alert('Login Successful');
