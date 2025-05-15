@@ -19,4 +19,8 @@ export class TestserviceService {
 
     this.isLogged = true;
   }
+
+  GetProducts() {
+    return this.http.get('https://localhost:7023/api/Products');
+  }
 }

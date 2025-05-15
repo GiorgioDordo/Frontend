@@ -25,4 +25,15 @@ export class Test1Component {
       },
     })
   }
+
+  ReadProducts() {
+    this.dataSvc.GetProducts().subscribe({
+      next: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
+  }
 }
