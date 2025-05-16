@@ -28,5 +28,5 @@ export class BindingComponent {
     }
 
     // Two Way Binding
-    twoWay: string = 'Hello from Two Way Binding!';
+    twoWay: string = 'Hello from Two Way Binding!';  
 }
